@@ -1,0 +1,190 @@
+/* Body */
+body {
+    background-color: #1a1a2e; /* Updated to match the first CSS */
+    font-family: 'Roboto', sans-serif;
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Video background */
+.video-bg {
+    width: 100%;
+    position: relative;
+    margin-top: -180px;
+    z-index: -1;
+}
+
+.video-header::before {
+    width: 100%;
+    height: 50vh;
+    top: -118px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(20, 23, 28, 0.7), rgba(20, 23, 28, 0));
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.video-header::after {
+    width: 100%;
+    bottom: 80px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(30, 11, 17, 0), #1a1a2e 91%); /* Updated to match the body background */
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo */ 
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    padding: 5px;
+}
+
+/* Changing text */
+.text-changing {
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%);
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px #00FFFF; /*Updated to bright cyan*/
+}
+
+/* Register/Login buttons */
+.links {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 5px;
+    z-index: 4;
+}
+
+.link-signup, .link-login {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid #00FFFF; /* Updated to bright cyan */
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.link-signup:hover, .link-login:hover {
+    background-color: #00e0e4; /* Updated to darker cyan for hover */
+}
+
+/* Welcome text */
+.text-welcome {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px #00FFFF; /* Updated to bright cyan */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 3;
+}
+
+.text-welcome a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Anime and manga suggestion page */
+.shows {
+    height: 500px;
+    background-color: #1a1a2e; /* Updated to match the body background */
+    text-align: center;
+    justify-items: center;
+    flex: 1;
+}
+
+.shows-responsive {
+    display: none;
+}
+
+.avatar {
+    width: 100px;
+    height: 175px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    justify-content: center;
+}
+
+.text-header {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px #00FFFF; /* Updated to bright cyan */
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/* Make responsive */
+/* When the screen is smaller than 1281px */
+@media (max-width: 1281px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Changing message and welcome text */
+    .text-changing, .text-welcome {
+        width: 100%;
+    }
+
+    /* Register/Login buttons */
+    .link-signup, .link-login {
+        line-height: 45px;
+    }
+}
+
+/* When the screen is smaller than 981px */
+@media (max-width: 981px) {
+    /* Background */
+    .video-bg {
+        margin-top: -10px;
+    }
+
+    /* Anime/Manga displayed */
+    .shows-not-responsive {
+        display: none;
+    }
+
+    .shows-responsive {
+        display: block;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+    }
+}

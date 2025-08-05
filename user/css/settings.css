@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e; /* Darker shade for body background */
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.9); /* Slightly dimmed text color */
+
+}
+
+.container {
+    width: 900px;
+    height: 100%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/* Header/settings */
+.settings-header, .settings-content {
+    width: 100%;
+    height: 100%;
+    background-color: #16213e; /* Darker shade for container background */
+    color: rgba(255, 255, 255, 0.9); /* Slightly dimmed text color */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.settings-header {
+    text-align: center;
+}
+
+.settings-content {
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Header buttons */
+.buttons {
+    width: 100%;
+}
+
+.header-edit {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #00CED1; /* Dimmer cyan accent color */
+    color: #1a1a2e; /* Dark body background color for text */
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.header-edit:hover {
+    background-color: #00FFFF; /* Bright cyan accent color for hover */
+}
+
+/* Settings form configurations */
+.section-profile {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-profile h4 {
+    text-align: left;
+}
+
+.section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+/* Settings fields */
+.textarea-input, .select-input, .text-input, .birthday-input {
+    width: 100%;
+    height: 50px;
+    background-color: #1a1a2e; /* Darker shade for body background */
+    color: rgba(255, 255, 255, 0.9); /* Slightly dimmed text color */
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.textarea-input {
+    min-height: 50px;
+    padding: 15px 0 0 20px;
+    resize: vertical;
+}
+
+.select-input {
+    padding: 15px !important;
+}
+
+.birthday-input {
+    width: 32%;
+}
+
+.year {
+    float: right;
+}
+
+.day {
+    float: left;
+}
+
+.submit-input {
+    width: 150px;
+    height: 40px;
+    background-color: #00CED1; /* Dimmer cyan accent color */
+    color: #1a1a2e; /* Dark body background color for text */
+    font-size: 22px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-input:hover {
+    background-color: #00FFFF; /* Bright cyan accent color for hover */
+}
+
+/* Div for file upload */
+.dropbox {
+    width: 225px;
+    height: 225px;
+    background: #1a1a2e; /* Darker shade for body background */
+    color: rgba(255, 255, 255, 0.9); /* Slightly dimmed text color */
+    padding: 18px 20px;
+    border-radius: 4px;
+    outline-offset: -10px;
+    outline: 2px dashed #00CED1; /* Dimmer cyan accent color */
+    margin-right: 20px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    vertical-align: text-top;
+    transition: background-color 0.3s ease;
+}
+
+.dropbox:hover {
+    background-color: #0f3460; /* Darker shade for header background */
+}
+
+.file-input {
+    width: 100%;
+    height: 225px;
+    margin-left: -20px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* Checkbox to delete avatar/banner */
+.form-checkbox {
+    margin-top: 5px;
+}
+
+/* Display avatar/banner */
+.avatar, .banner {
+    width: 150px;
+    height: 225px;
+    border-radius: 4px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+.banner {
+    width: calc(100% - 255px);
+    background-position: 50% 5%;
+}
+
+/* Display error message */
+.error-image {
+    color: rgba(220, 20, 60, 1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: rgba(220, 20, 60, 1);
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.error:nth-of-type(3) {
+    position: absolute;
+}
+
+/* Make responsive */
+@media (max-width: 951px) {
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Buttons */
+    .header-edit {
+        width: 135px;
+    }
+}

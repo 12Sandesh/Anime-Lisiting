@@ -1,0 +1,46 @@
+/* Footer */
+.footer {
+    background-color: #343F51; /* Dark & Stormy for footer background */
+    height: 80px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Links */
+.footer-links {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.link {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    margin-right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #00e0e4; /* Updated to match button color for hover */
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    text-align: center;
+}
+
+/* Make responsive */
+@media (max-width: 651px) {
+    .copyright {
+        padding: 5px;
+    }
+
+    .footer-links {
+        height: 35px;
+        line-height: 35px;
+    }
+}

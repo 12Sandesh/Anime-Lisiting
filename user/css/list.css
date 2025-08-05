@@ -1,0 +1,338 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e; /* Darker shade for body background */
+    color: rgba(255, 255, 255, 1); /* Text color */
+    max-width: auto;
+    max-height: auto;
+}
+}
+
+/* Background color */
+.bg-color {
+    width: 100%;
+    height: 200px;
+    background-color: #0f3460; /* Darker shade for header background */
+    position: fixed;
+    z-index: -1;
+}
+
+/* Menu */
+.header {
+    width: 100%;
+    height: 200px;
+    background-color: #0f3460; /* Darker shade for header background */
+}
+
+.menu {
+    width: 1100px;
+    height: 100%;
+}
+
+.menu-logo { 
+    width: 500px;
+    height: 100px;
+    margin-left: -10px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+.menu-buttons {
+    width: 450px;
+    color: rgba(255, 255, 255, 1); /* Text color */
+    margin-top: 20px;
+    font-weight: 700;
+    float: right;
+}
+
+.menu-content {
+    float: right;
+}
+
+.menu-redirect, .fa-angle-down {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1); /* Text color */
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.list-display-none {
+    display: none;
+    float: right;
+}
+
+.list-display-block, .list-display-block a {
+    width: 125px;
+    height: 100%;
+    color: rgba(255, 255, 255, 1); /* Text color */
+    text-decoration: none;
+    text-align: right;
+    display: block;
+}
+
+.list-display-block a:hover {
+    text-decoration: underline;
+}
+
+/* List container */
+.list-container {
+    width: 1100px;
+    background-color: #16213e; /* Darker shade for container background */
+    color: rgba(255, 255, 255, 1); /* Text color */
+    padding: 15px;
+    margin-top: -100px;
+    margin-bottom: 75px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Background */
+.list-background {
+    width: 100%;
+    height: 400px;
+    background-position: 50%;
+    border-radius: 5px 5px 0 0;
+    background-position: 50% 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(1, 1, 44, 0) 40%, rgba(1, 1, 44, 0.6));
+}
+
+/* Status menu */
+.status-menu {
+    width: 100%;
+    height: 50px;
+}
+
+.status-button {
+    color: rgba(255, 255, 255, 1); /* Text color */
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.status-button:hover {
+    background-color: #00CED1; /* Dimmer cyan accent color */
+    border-radius: 5px;
+}
+
+/* Status text */
+.list-status {
+    background-color: #00CED1; /* Dimmer cyan accent color */
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+/* Table */
+.list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-table-data:nth-of-type(2n+1) {
+    background-color: #0f3460; /* Darker shade for text background */
+}
+
+.block {
+    width: 100%;
+    height: 80px;
+    background-color: #0f3460; /* Darker shade for text background */
+}
+
+/* Table columns */
+.status {
+    width: 5px;
+}
+
+.rank {
+    width: 30px;
+}
+
+.image {
+    width: 50px;
+}
+
+.title {
+    width: 650px;
+}
+
+.title, .title a {
+    color: rgba(255, 255, 255, 1); /* Text color */
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    text-align: left;
+}
+
+/* Table header */
+.list-table-header {
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.data-header {
+    background-color: #00CED1; /* Dimmer cyan accent color */
+}
+
+/* Table body */
+.data {
+    padding: 4px 0;
+}
+
+.watching {
+    background-color: #2db039;
+}
+
+.completed {
+    background-color: #26448f;
+}
+
+.dropped {
+    background-color: #a12f31;
+}
+
+.plantowatch {
+    background-color: #c3c3c3;
+}
+
+.avatar {
+    width: 50px;
+    height: 80px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+/* Total data */
+.list-total {
+    width: 100%;
+    height: 25px;
+    background-color: #00CED1; /* Dimmer cyan accent color */
+    border-radius: 0 0 5px 5px;
+}
+
+/* Footer */
+html, body {
+    height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -30px; 
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer, .page-wrap:after {
+    height: 30px; 
+}
+
+.footer {
+    background-color: #16213e; /* Darker shade for container background */
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    color: rgba(255, 255, 255, 1); /* Text color */
+    line-height: 30px;
+    text-align: center;
+}
+
+/* Make responsive */
+@media (max-width: 1281px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Containers */
+    .container {
+        padding: 5px;
+    }
+
+    .list-container, .menu {
+        width: 100%;
+    }
+
+    /* List buttons */
+    .status-menu {
+        height: 100%;
+    }
+
+    /* Status bar */
+    .status {
+        padding: 2px;
+    }
+
+    /* Add spacing between avatar and title */
+    .avatar {
+        margin-right: 10px;
+    }
+    .title a {
+        padding: 0;
+    }
+
+    /* Spacing between score/type/progress text */
+    .score, .type {
+        padding: 0 5px 0 0;
+    }
+
+    .progress:nth-of-type(1n) {
+        padding: 0 5px 0 0;
+    }
+}
+
+/* Increase footer size when screen is smaller than 681px */
+@media (max-width: 651px) {
+    .copyright {
+        padding: 5px;
+        line-height: 20px;
+    }
+    .footer, .page-wrap:after {
+        height: 50px; 
+    }
+    .margin-bottom {
+        height: 50px;
+    }
+}
+
+/* Make the list menu/logo responsive when the screen is smaller than 851px */
+@media (max-width: 851px) {
+    /* Container */
+    .list-container {
+        margin-top: -40px;
+    }
+
+    /* Logo */
+    .menu-logo {
+        float: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    /* List menu */
+    .menu-content {
+        margin-top: 65px;
+    }
+}

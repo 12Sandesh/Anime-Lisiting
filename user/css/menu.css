@@ -1,0 +1,534 @@
+/* Spacing */
+* {
+    margin: 0 auto;
+}
+
+/* General menu */
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: #343F51; /* Dark & Stormy for menu background */
+    font-size: 18px;
+    position: fixed; /* Stick to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 999; /* Ensure it stays above other content */
+}
+
+/* Left menu (navigation links) */
+.menu-left ul li {
+    width: 75px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    line-height: 50px;
+    text-align: center;
+    list-style-type: none;
+    float: left;
+}
+
+.menu-left ul li ul li {
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+}
+
+.menu-left a {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    text-decoration: none;
+    display: block;
+}
+
+.default {
+    cursor: default;
+}
+
+.menu-left ul li:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+.menu-left ul ul {
+    display: none;
+}
+
+.menu-left ul li:hover > ul {
+    display: block;
+}
+
+/* Center menu (search) */
+.menu-search {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    float: left;
+}
+
+.menu-search-bar {
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.menu-search-txt {
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    float: left;
+}
+
+.menu-search-button {
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    float: left;
+}
+
+/* Auto-complete search menu */
+
+/* Menu */
+.ui-menu {
+    width: 350px;
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+    list-style-type: none;
+    position: relative;
+    z-index: 999;
+}
+
+.ui-menu-item {
+    height: 100%;
+    padding: 5px; 
+}
+
+.ui-menu .ui-menu-item:hover, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+.ui-helper-hidden-accessible {
+    display: none !important;
+}
+
+/* Container */
+.container-autocomplete {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: auto;
+}
+
+/* Image and content */
+.search-autocomplete-image {
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.search-autocomplete-content {
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.search-autocomplete-clear {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+}
+
+/* Right menu (register/login) */
+.menu-right {
+    width: 275px;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+}
+
+.menu-right-buttons {
+    width: 215px;
+}
+
+.menu-right-signup, .menu-right-login {
+    width: 100px;
+    height: 25px;
+    border: 2px solid;
+    border-color: rgba(255, 255, 255, 1); /* Text Color */
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Right menu after notifications */
+.menu-right-links {
+    width: 30px;
+    float: left;
+    margin-left: 5px;
+}
+
+.menu-notifications .fa {
+    font-size: 30px;
+    line-height: 50px;
+    color: #00e0e4; /* Almond Rose for accent color */
+    cursor: pointer;
+}
+
+.menu-notifications-number:after {
+    background-color: #00e0e4; /* Almond Rose for accent color */
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 10px;
+    line-height: 1.0em;
+    content: attr(data-unread);
+    position: absolute;
+    top: 5px;
+}
+
+.menu-notifications .fa:hover {
+    color: #00FFFF; /* Lighter shade of Almond Rose for hover */
+}
+
+.menu-notifications-container {
+    width: 300px;
+    max-height: 400px;
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    margin-top: 50px;
+    display: none;
+    overflow: auto;
+    position: absolute;
+    transform: translate(-85%);
+}
+
+.menu-notifications-none {
+    text-align: center;
+}
+
+.menu-notifications-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.menu-friend-avatar {
+    width: 50px;
+    height: 75px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.menu-notifications-content {
+    width: 100%;
+    height: 75px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.menu-friend-username {
+    height: 30px;
+    font-size: 9.5px;
+    line-height: 30px;
+}
+
+.menu-friend-username a {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-friend-confirm form {
+    display: inline-block;
+}
+
+.menu-friend-confirm {
+    text-align: center;
+}
+
+.menu-friend-buttons {
+    width: 85px;
+    background-color: #00e0e4; /* Almond Rose for accent color */
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Right menu profile name/avatar */
+.menu-right-profile {
+    width: 150px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+.menu-right-profile:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+.menu-right-profile-links {
+    width: 150px;
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    margin-left: 55px;
+    text-align: center;
+    display: none;
+    float: left;
+    position: absolute;
+    top: 50px;
+}
+
+.menu-right-profile-links a {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    text-decoration: none;
+    display: block;
+}
+
+.menu-right-profile-links li {
+    height: 50px;
+    list-style-type: none;
+}
+
+.menu-right-profile-links ul li:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+.menu-right-logout {
+    width: 150px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.menu-avatar {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: #e1e7f5 0 0 0 1px inset;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: #14445F; /* Neptune's Wrath for clicked background */
+}
+
+/* Responsive menu */
+.menu-responsive {
+    width: 100%;
+    height: 50px;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    float: right;
+    display: none;
+}
+
+/* Search/home/notifications/links button */
+.menu-responsive-search, .menu-responsive-home, .menu-responsive-notifications, .links-activator {
+    width: 55px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+.menu-responsive-home a {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+}
+
+.menu-responsive-search, .menu-responsive-notifications, .links-activator {
+    font-size: 28px !important;
+}
+
+.menu-responsive-search:hover, .menu-responsive-home:hover, .menu-responsive-notifications:hover, .links-activator:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+/* Links when activated */
+.menu-responsive-links {
+    width: 100%;
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    margin-top: 50px;
+    text-align: right;
+    display: none;
+}
+
+.menu-responsive-links a {
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    text-decoration: none;
+}
+
+.menu-responsive-links ul li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px 0 0;
+}
+
+.menu-responsive-links ul li:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+
+.view {
+    display: block;
+}
+
+/* Logout button */
+.menu-responsive-logout {
+    width: 100%;
+    height: 50px;
+    color: rgba(255, 255, 255, 1); /* Text Color */
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.logout-clear {
+    display: block;
+}
+
+/* Make responsive */
+@media (max-width: 1281px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Container */
+    .menu-right, .menu-search, .menu-left {
+        display: none;
+    }
+
+    /* Menu and buttons */
+    .menu-responsive, .menu-responsive-search, .menu-responsive-home, .menu-responsive-notifications, .links-activator {
+        display: block;
+    }
+
+    /* Search menu */
+    .menu-search {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .menu-search-bar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-search-txt {
+        width: 90%;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .menu-search-button {
+        width: 10%;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 0;
+    }
+
+    /* Make autocomplete responsive */
+    .ui-menu {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Make notifications responsive */
+    .menu-notifications-container {
+        max-height: 800px;
+    }
+
+    .responsive {
+        width: 100% !important;
+        transform: translate(0%);
+    }
+
+    /* Notification font */
+    .menu-friend-username {
+        font-size: 18px;
+    }
+
+    /* Confirm buttons */
+    .menu-friend-confirm {
+        margin-top: 10px;
+    }
+
+    .menu-notifications-none {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Disable responsive menu when screen is larger than 1281px */
+@media (min-width: 1281px) {
+    .view {
+        display: none;
+    }
+}
+
+/* Ensure the parent element has relative positioning for the dropdown to align */
+.menu-right-profile {
+    position: relative; /* Allow the dropdown to position itself within this container */
+    cursor: pointer; /* Make the profile area clickable */
+}
+
+.menu-right-profile .username-text {
+    color: white;
+    text-decoration: none; /* This is crucial to keep the underline away */
+}
+
+.menu-right-profile-links {
+    display: none; /* Initially hidden */
+    position: absolute; /* So it can be positioned relative to the profile */
+    top: 50px; /* Adjust as needed */
+    right: 0; /* Align to the right edge */
+    background-color: #1f2833; /* Darker shade of #343F51 for dropdown background */
+    z-index: 1000; /* Ensure it's above other elements */
+    text-decoration: none;
+}
+
+.menu-right-profile-links ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-right-profile-links li {
+    padding: 10px; /* Add some padding to the list items */
+}
+
+.menu-right-profile-links a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    display: block; /* Make the links fill the list item width */
+}
+
+.menu-right-profile-links li:hover {
+    background-color: #14445F; /* Neptune's Wrath for hover background */
+}
+

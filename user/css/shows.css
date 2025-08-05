@@ -1,0 +1,336 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e; /* Darker shade for body background */
+    color: rgba(255, 255, 255, 1); /* Text color */
+}
+
+/* Banner */
+.banner {
+    height: 330px;
+    background-color: #16213e; /* Darker shade for banner background */
+    background-position: 50% 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -2;
+}
+
+/* Banner shadow */
+.banner-shadow {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(1, 1, 44, 0) 40%, rgba(1, 1, 44, 0.6));
+    position: absolute;
+    z-index: -1;
+}
+
+/* Titles */
+h3 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1); /* Text color */
+}
+
+/* General container */
+.container {
+    width: 1100px;
+    color: rgba(255, 255, 255, 1); /* Text color */
+    margin-bottom: 75px;
+    display: flex;
+}
+
+/* Left container */
+.container-left {
+    width: 235px;
+    padding: 10px;
+}
+
+/* Avatar */
+.avatar {
+    width: 225px;
+    background-color: #16213e; /* Darker shade for avatar background */
+    padding: 10px;
+    margin-top: -200px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.avatar-shows {
+    width: 225px;
+    height: 350px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+/* Add/remove from favorites */
+.favorite-add {
+    background-color: #16213e; /* Darker shade for button background */
+    color: rgba(255, 255, 255, 1); /* Text color */
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.remove {
+    color: red !important;
+}
+
+/* Information */
+.info {
+    width: 225px;
+    background-color: #16213e; /* Darker shade for info background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.clear {
+    margin-top: 10px;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.info-span {
+    font-weight: 700;
+}
+
+/* Right container */
+.container-right {
+    width: 865px;
+    padding: 10px;
+}
+
+/* Title */
+.title {
+    width: 865px;
+    margin-top: -50px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.title-clear {
+    display: inline-block;
+}
+
+.edit {
+    color: rgba(255, 255, 255, 1); /* Text color */
+    text-decoration: none;
+}
+
+.edit:hover {
+    text-decoration: underline;
+}
+
+/* Score and members */
+.ranked {
+    background-color: #16213e; /* Darker shade for ranked background */
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.score, .members {
+    width: 100px;
+    height: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.score::before {
+    height: 20px;
+    background-color: #00e0e4; /* Darker cyan for score background */
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 3px;
+    content: 'Score';
+    display: block;
+}
+
+.members::before {
+    height: 20px;
+    background-color: #00e0e4; /* Darker cyan for members background */
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 3px;
+    content: 'Members';
+    display: block;
+}
+
+/* Add to list / remove from list / status / score / episodes */
+.user-add {
+    background-color: #16213e; /* Darker shade for user-add background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form, .status-score {
+    display: inline-block;
+}
+
+.button-submit {
+    width: 125px;
+    height: 25px;
+    background-color: #00e0e4; /* Darker cyan for button background */
+    color: #1a1a2e; /* Dark body background color for text */
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+
+.select {
+    display: inline-block;
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+    background-color: #00e0e4; /* Darker cyan for select background */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-episodes, .user-chapters, .user-volumes {
+    font-size: 14px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 130px;
+    height: 25px;
+    padding-left: 5px;
+    background-color: #00e0e4; /* Darker cyan for input background */
+}
+
+.user-episodes input, .user-chapters input, .user-volumes input {
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    background-color: #00e0e4; /* Darker cyan for input background */
+    outline: none;
+    text-align: right;
+    color: white;
+}
+
+.user-delete input {
+    margin-top: 10px;
+    font-size: 12px;
+    color: red;
+    cursor: pointer;
+    border: none;
+    background-color: #16213e; /* Darker shade for delete button background */
+    outline: none;
+}
+
+.not-login a {
+    color: rgba(255, 255, 255, 1); /* Text color */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Synopsis */
+.sinopse {
+    background-color: #16213e; /* Darker shade for synopsis background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Characters */
+.characters {
+    background-color: #16213e; /* Darker shade for characters background */
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.character {
+    width: 100%;
+    height: 75px;
+    background-color: #1a1a2e; /* Darker shade for character background */
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas: 'avatar content';
+}
+
+.avatar-character {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-right: 1px solid;
+    border-color: rgba(255, 255, 255, 1);
+    grid-area: avatar;
+}
+
+.content {
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    font-size: 14px;
+    grid-area: content;
+    box-sizing: border-box;
+}
+
+.name {
+    height: 35px;
+}
+
+.name a {
+    color: rgba(255, 255, 255, 1); /* Text color */
+    text-decoration: none;
+}
+
+/* Make responsive */
+@media (max-width: 1281px) {
+    /* Containers */
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-row-gap: 50px;
+        padding: 5px;
+    }
+
+    .container-left, .container-right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Avatar */
+    .avatar {
+        box-sizing: content-box !important;
+    }
+
+    /* Information and title */
+    .info, .title {
+        width: 100%;
+    }
+}
+
+/* Stack forms for score/status/chapters/volumes when screen is smaller than 601px for manga list */
+@media (max-width: 601px) {
+    .status-score {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,115 @@
+/* Body */
+body {
+    background-color: #1a1a2e; /* Darker shade for body background */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Registration form - container */
+.form-container-all {
+    width: 600px;
+    height: 100%;
+    background-color: #16213e; /*Darker shade for container background*/
+    margin-top: 9.7%;
+    margin-bottom: 8%;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.form-container-all-reg {
+    width: 600px;
+    height: 100%;
+    background-color: #16213e; /*Darker shade for container background*/
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Registration form */
+.form-container {
+    width: 500px;
+    height: 100%;
+    padding: 5px;
+}
+
+.logo {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.logo img{
+    height: 50%;
+}
+
+.form-input {
+    width: 460px;
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-checkbox {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: -3px;
+    margin-bottom: -25px;
+}
+
+.form-submit-button {
+    width: 140px;
+    height: 40px;
+    background-color: #00e0e4; /* Darker cyan for normal state */
+    color: #1a1a2e; /* Dark body background color for text */
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit-button:hover {
+    background-color: #00FFFF; /* Bright cyan accent color for hover */
+}
+
+.form-error {
+    color: #FF0000; /* Red for error messages */
+}
+
+.support-error {
+    color: #FF0000; /* Red for error messages */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.support-error:hover {
+    text-decoration: underline;
+}
+
+/* Make responsive */
+@media (max-width: 1201px) {
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Form */
+    .form-container-all, .form-container, .form-input {
+        width: 100%;
+    }
+}
